@@ -37,7 +37,6 @@ public class EmployeeController {
         service.delete(id);
     }
 
-    // ✅ Export all employees to Excel
     @GetMapping("/export/excel")
     public ResponseEntity<byte[]> exportToExcel() throws Exception {
         List<Employee> employees = service.getAll();
