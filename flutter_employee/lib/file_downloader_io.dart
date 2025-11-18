@@ -12,7 +12,6 @@ Future<String> saveAndOpen(Uint8List bytes, String filename) async {
   try {
     await OpenFilex.open(file.path);
   } catch (e) {
-    // ignore open errors but still return path for user reference
     print('OpenFilex.open failed: $e');
   }
   return file.path;
